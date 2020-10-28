@@ -138,7 +138,11 @@ h2 {
 /* Block 3 */
 
 .three {
-    background-color: #222;
+    background: linear-gradient(90deg,rgb(255, 147, 176),rgb(255, 149, 83));
+}
+
+#contact-container {
+    display: flex;
 }
 
 h3 {
