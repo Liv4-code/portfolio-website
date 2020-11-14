@@ -1,6 +1,7 @@
 // Add mouseover event for block 1 nav icons giving CV description.
 
-const arrow = document.querySelector(.arrow-container span);
-console.log(arrow);
+// Add click event for arrow using srollby method.
 
-arrow.addEventListener("", function());
+const arrow = document.querySelector(".arrow-container span");
+
+arrow.addEventListener

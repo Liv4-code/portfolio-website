@@ -143,6 +143,8 @@ h2 {
 
 #contact-container {
     display: flex;
+    justify-content: space-evenly;
+    margin-top: 15vh;
 }
 
 h3 {
@@ -156,9 +158,13 @@ h3 {
 
 #quote {
     display: flex;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+    width: 25%;
+    padding: 25px;
 }
 
-pre {
+#quote p {
     font-size: 22px;
     animation: text-color 10s infinite;
 }
@@ -177,4 +183,11 @@ pre {
     {
         color: rgb(170, 255, 241);
     }
+}
+
+form {
+    border-radius: 25px;
+    background-color: rgb(203, 255, 248);
+    opacity: 80%;
+    padding: 25px;
 }
