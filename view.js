@@ -3,5 +3,3 @@
 // Add click event for arrow using srollby method.
 
 const arrow = document.querySelector(".arrow-container span");
-
-arrow.addEventListener

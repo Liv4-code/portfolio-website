@@ -1,5 +1,9 @@
 /* Entire Page */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0px;
     width: 100%;
@@ -89,17 +93,42 @@ h1 {
 
 /* Arrow */
 
-.arrow-container {
+.arrow-container a {
     display: flex;
     justify-content: center;
 }
 
-.arrow-container span {
+.arrow-1 {
     margin-top: 180px;
     width: 20px;
     height: 20px;
     border-bottom: 4px solid #222 ;
     border-left: 4px solid #222;
+    transform: rotate(315deg);
+    animation: arrow-pulse 2s infinite;
+}
+
+/* Block 2 */
+
+.two {
+    background-color: #222;
+}
+
+h2 {
+    margin: 0px;
+    text-align: center;
+    padding-top: 150px;
+    letter-spacing: 10px;
+    font-size: 28px;
+    color: rgb(255, 224, 255);
+}
+
+.arrow-2 {
+    margin-top: 480px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 4px solid rgb(228, 228, 228) ;
+    border-left: 4px solid rgb(228, 228, 228);
     transform: rotate(315deg);
     animation: arrow-pulse 2s infinite;
 }
@@ -118,21 +147,6 @@ h1 {
     {
         opacity: 0%;
     }
-}
-
-/* Block 2 */
-
-.two {
-    background-color: #222;
-}
-
-h2 {
-    margin: 0px;
-    text-align: center;
-    padding-top: 150px;
-    letter-spacing: 10px;
-    font-size: 28px;
-    color: rgb(255, 224, 255);
 }
 
 /* Block 3 */
@@ -188,6 +202,5 @@ h3 {
 form {
     border-radius: 25px;
     background-color: rgb(203, 255, 248);
-    opacity: 80%;
     padding: 25px;
 }

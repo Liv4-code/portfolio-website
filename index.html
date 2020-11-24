@@ -10,7 +10,7 @@
         <script src="https://kit.fontawesome.com/df2859c34a.js" crossorigin="anonymous"></script>
     </head>
     <body>
-
+<!-- BLOCK ONE -->
         <header class="block one">
             <h1>const <span id="nameHeading">olivia</span> = <span id="webDeveloperHeading">web developer</span>;</h1>
             <div class="icon-container">
@@ -20,16 +20,19 @@
                     <a href="cv.pdf" download target="_blank"><span><i class="icon fas fa-file-alt"></i></span></a>
             </div>
             <div class="arrow-container">
-                <span></span>
+                <a href="#block-two"><span class="arrow-1"></span></a>
             </div>
         </header>
-
+<!-- BLOCK TWO -->
         <main>
-            <div class="block two">
-                <h2>Projects:</h2>
+            <div class="block two" id="block-two">
+                <h2 id="projects">Projects:</h2>
+                <div class="arrow-container">
+                    <a href="#block-three"><span class="arrow-2"></span></a>
+                </div>
             </div>
-
-            <div class="block three">
+<!-- BLOCK THREE -->
+            <div class="block three" id="block-three">
                 <h3>Contact Me:</h3>
                 <div id="contact-container">
                     <div id="quote">
@@ -52,6 +55,6 @@
         <footer>
 
         </footer>
-        
+        <script src="view.js"></script>
     </body>
 </html>
