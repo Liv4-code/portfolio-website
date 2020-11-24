@@ -1,5 +1,7 @@
 // Add mouseover event for block 1 nav icons giving CV description.
 
-// Add click event for arrow using srollby method.
+const homeButton = document.querySelector("button");
 
-const arrow = document.querySelector(".arrow-container span");
+homeButton.addEventListener("click", () => {
+    window.scrollTo(0,0);
+});

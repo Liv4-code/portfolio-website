@@ -167,7 +167,7 @@ h3 {
     padding-top: 150px;
     letter-spacing: 10px;
     font-size: 26px;
-    color: rgb(255, 208, 170);
+    color: rgb(253, 215, 184);
 }
 
 #quote {
@@ -180,7 +180,7 @@ h3 {
 
 #quote p {
     font-size: 22px;
-    animation: text-color 10s infinite;
+    animation: text-color 6s infinite;
 }
 
 @keyframes text-color
@@ -189,13 +189,17 @@ h3 {
     {
         color: rgb(170, 255, 241);
     }
+    25% 
+    {
+        color: rgb(170, 255, 241);
+    }
     50% 
     {
-        color: rgb(255, 224, 255);
+        color:rgb(124, 124, 124);
     }
     100% 
     {
-        color: rgb(170, 255, 241);
+        color: rgb(255, 224, 255);
     }
 }
 
@@ -203,4 +207,23 @@ form {
     border-radius: 25px;
     background-color: rgb(203, 255, 248);
     padding: 25px;
+}
+
+.home-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 135px;
+}
+
+.home-button button {
+    background-color: rgb(243, 243, 243);
+    padding: 8px 15px 8px 15px;
+    font-family: inherit; 
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    border: none;
+}
+
+.home-button button:focus {
+    outline: none;
 }
