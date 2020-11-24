@@ -203,11 +203,29 @@ h3 {
     }
 }
 
+/* Form */
+
 form {
     border-radius: 25px;
     background-color: rgb(203, 255, 248);
     padding: 25px;
+    display: flex;
+    flex-direction: column;
 }
+
+input {
+    font-family: inherit;
+    font-weight: bold;
+    text-align: center;
+}
+
+textarea {
+    font-family: inherit;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Home Button */
 
 .home-button {
     display: flex;
