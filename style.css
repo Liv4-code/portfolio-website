@@ -213,6 +213,10 @@ form {
     flex-direction: column;
 }
 
+form > *:focus {
+    outline: none;
+}
+
 input {
     font-family: inherit;
     font-weight: bold;
@@ -223,6 +227,16 @@ textarea {
     font-family: inherit;
     font-weight: bold;
     text-align: center;
+}
+
+.valid {
+    background-color: rgb(217, 253, 163);
+    border: 2px solid rgb(73, 211, 73);
+}
+
+.invalid {
+    background-color: rgb(255, 155, 155);
+    border: 2px solid rgb(223, 66, 66);
 }
 
 /* Home Button */

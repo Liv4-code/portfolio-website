@@ -17,23 +17,44 @@ homeButton.addEventListener("click", () => {
     window.scrollTo(0,0);
 });
 
+// RegEx for first and last name input fields:
+
+const pattern = /^[a-zA-z]{2,}$/
+
 // Submit event on form:
 
 form.addEventListener("submit", e => {
     e.preventDefault();
 
     // validation
-
-    const pattern = /^[a-zA-z]{2,}$/
     const firstname = form.firstname.value;
     const lastname = form.lastname.value;
 
     if(pattern.test(firstname) && pattern.test(lastname)){
-        alert("Yes, that password is valid");
+        alert("The name you submitted is valid, thank you.");
     } else {
-        alert("No, your password is not valid!");
+        alert("Make sure your first and last name are at least 2 characters long...");
     }
 });
 
-// User input while they type into field (keyboard event):
+// User input color-change while typing into field (keyboard event):
 
+const names = document.querySelectorAll(".name");
+
+names.forEach(name => {
+    name.addEventListener("keyup", e => {
+        if(pattern.test(e.target.value)){
+            e.target.setAttribute("class", "valid");
+        } else {
+            e.target.setAttribute("class", "invalid");
+        }
+    });
+});
+// Removing the invalid class when input field is empty.
+names.forEach(name => {
+    name.addEventListener("keyup", () => {
+        if(name.value === ""){
+            name.classList.remove("invalid");
+        }
+    });
+});
