@@ -50,7 +50,7 @@ names.forEach(name => {
         }
     });
 });
-// Removing the invalid class when input field is empty.
+// Removing the invalid class (removing colour) when input field is empty.
 names.forEach(name => {
     name.addEventListener("keyup", () => {
         if(name.value === ""){

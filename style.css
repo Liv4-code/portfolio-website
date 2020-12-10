@@ -123,8 +123,31 @@ h2 {
     color: rgb(255, 224, 255);
 }
 
+.projects-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 13px;
+}
+
+.projects-container div {
+    background-color: rgb(233, 233, 233);
+    margin-top: 50px;
+    width: 280px;
+    height: 400px;
+}
+
+@keyframes smoke-wipe {
+    50% {background-color: rgb(110, 110, 110);}
+    75% {background-color: rgb(110, 110, 110);}
+    100% {background-color: rgb(110, 110, 110);}
+}
+
+.projects-container div:hover {
+    animation: smoke-wipe 2s;
+}
+
 .arrow-2 {
-    margin-top: 480px;
+    margin-top: 60px;
     width: 20px;
     height: 20px;
     border-bottom: 4px solid rgb(228, 228, 228) ;
