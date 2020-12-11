@@ -23,7 +23,6 @@ body {
     background: linear-gradient(90deg,rgb(255, 147, 176),rgb(255, 149, 83));
 }
 
-
 h1 {
     margin: 0px;
     text-align: center;
@@ -130,6 +129,9 @@ h2 {
 }
 
 .projects-container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     background-color: rgb(233, 233, 233);
     margin-top: 50px;
     width: 280px;
@@ -144,6 +146,16 @@ h2 {
 
 .projects-container div:hover {
     animation: smoke-wipe 2s;
+}
+
+.projects-container div a {
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background: rgb(203, 255, 248);
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .arrow-2 {
