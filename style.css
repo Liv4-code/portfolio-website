@@ -95,6 +95,7 @@ h1 {
 .arrow-container a {
     display: flex;
     justify-content: center;
+    cursor: auto;
 }
 
 .arrow-1 {
@@ -116,7 +117,7 @@ h1 {
 h2 {
     margin: 0px;
     text-align: center;
-    padding-top: 150px;
+    padding-top: 120px;
     letter-spacing: 10px;
     font-size: 28px;
     color: rgb(255, 224, 255);
@@ -125,31 +126,40 @@ h2 {
 .projects-container {
     display: flex;
     justify-content: space-evenly;
-    margin-right: 13px;
 }
 
-.projects-container div {
+.project-img {
+    background-image: url("assets/history-quiz.png");
+    background-size: cover;
+    background-position: center;
+    background-color: gainsboro;
+    margin-top: 70px;
+    min-width: 20vw;
+    
+}
+
+.project-img div {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: rgb(233, 233, 233);
-    margin-top: 50px;
-    width: 280px;
+    align-items: center;
+    background-color: rgb(110, 110, 110);
+    opacity: 0%;
     height: 400px;
 }
 
-@keyframes smoke-wipe {
-    50% {background-color: rgb(110, 110, 110);}
-    75% {background-color: rgb(110, 110, 110);}
-    100% {background-color: rgb(110, 110, 110);}
+.project-img div:hover {
+    animation: appear 1.5s;
+    animation-fill-mode: forwards;
 }
 
-.projects-container div:hover {
-    animation: smoke-wipe 2s;
+@keyframes appear {
+    100% {opacity: 90%;}
 }
 
-.projects-container div a {
+.project-img div a {
     font-size: 20px;
+    width: 75%;
     text-align: center;
     text-decoration: none;
     color: black;
@@ -199,7 +209,7 @@ h2 {
 h3 {
     margin: 0px;
     text-align: center;
-    padding-top: 150px;
+    padding-top: 120px;
     letter-spacing: 10px;
     font-size: 26px;
     color: rgb(253, 215, 184);
@@ -222,7 +232,7 @@ h3 {
 {
     0% 
     {
-        color: rgb(170, 255, 241);
+        color: rgb(107, 107, 107);
     }
     25% 
     {
@@ -230,11 +240,11 @@ h3 {
     }
     50% 
     {
-        color:rgb(124, 124, 124);
+        color:rgb(170, 255, 241);
     }
     100% 
     {
-        color: rgb(255, 224, 255);
+        color: rgb(87, 87, 87);
     }
 }
 
@@ -246,6 +256,11 @@ form {
     padding: 25px;
     display: flex;
     flex-direction: column;
+    width: 20%;
+}
+
+form > * {
+    height: 20%;
 }
 
 form > *:focus {
@@ -262,6 +277,7 @@ textarea {
     font-family: inherit;
     font-weight: bold;
     text-align: center;
+    height: 55%;
 }
 
 .valid {
@@ -289,6 +305,7 @@ textarea {
     font-size: 15px;
     letter-spacing: 1.5px;
     border: none;
+    cursor: pointer;
 }
 
 .home-button button:focus {
