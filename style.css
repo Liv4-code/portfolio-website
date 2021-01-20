@@ -252,7 +252,8 @@ h3 {
 
 form {
     border-radius: 25px;
-    background-color: rgb(203, 255, 248);
+    background-color: rgb(186, 245, 236);
+    box-shadow: 0 0 20px 0 rgb(138, 136, 136) ;
     padding: 25px;
     display: flex;
     flex-direction: column;
