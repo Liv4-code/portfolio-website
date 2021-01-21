@@ -29,6 +29,7 @@ h1 {
     padding-top:200px;
     word-spacing: 50px;
     font-size: 40px;
+    color: rgb(56, 56, 56);
 }
 
 #nameHeading {
@@ -120,7 +121,7 @@ h2 {
     padding-top: 120px;
     letter-spacing: 10px;
     font-size: 28px;
-    color: rgb(255, 224, 255);
+    color: rgb(255, 255, 255);
 }
 
 .projects-container {
@@ -128,14 +129,37 @@ h2 {
     justify-content: space-evenly;
 }
 
-.project-img {
+.project-img:nth-child(1) {
+    background-image: url("assets/bcg-change.png");
+    background-size: cover;
+    background-position: center;
+    background-color: gainsboro;
+    margin-top: 70px;
+    min-width: 20vw;
+}
+.project-img:nth-child(2) {
     background-image: url("assets/history-quiz.png");
     background-size: cover;
     background-position: center;
     background-color: gainsboro;
     margin-top: 70px;
     min-width: 20vw;
-    
+}
+.project-img:nth-child(3) {
+    background-image: url("assets/sparkle-me.png");
+    background-size: cover;
+    background-position: center;
+    background-color: gainsboro;
+    margin-top: 70px;
+    min-width: 20vw;
+}
+.project-img:nth-child(4) {
+    background-image: url("assets/todo-list.png");
+    background-size: cover;
+    background-position: center;
+    background-color: gainsboro;
+    margin-top: 70px;
+    min-width: 20vw;
 }
 
 .project-img div {
@@ -154,7 +178,7 @@ h2 {
 }
 
 @keyframes appear {
-    100% {opacity: 90%;}
+    70% {opacity: 70%;}
 }
 
 .project-img div a {
