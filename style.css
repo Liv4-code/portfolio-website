@@ -129,8 +129,9 @@ h2 {
 .projects-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
     grid-column-gap: 70px;
-    margin: 20px 30px 0 30px;
+    margin: 80px 30px 0 30px;
 }
 
 .project-img {
@@ -138,37 +139,11 @@ h2 {
     position: relative;
 }
 
-.project-img::before {
-    content: "";
-    background-image: url("assets/history-quiz.png");
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
-.project-img::before:hover {
-    content: "";
-    background-image: url("assets/history-quiz.png");
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    opacity: 50%;
-}
-
-.project-img a {
-    position: absolute;
-}
-
-/* .project-img:nth-child(1) {
+.project-img:nth-child(1) {
     background-image: url("assets/bcg-change.png");
     background-size: cover;
     background-position: center;
     background-color: gainsboro;
-    margin-top: 70px;
     min-width: 20vw;
 }
 .project-img:nth-child(2) {
@@ -176,7 +151,6 @@ h2 {
     background-size: cover;
     background-position: center;
     background-color: gainsboro;
-    margin-top: 70px;
     min-width: 20vw;
 }
 .project-img:nth-child(3) {
@@ -184,7 +158,6 @@ h2 {
     background-size: cover;
     background-position: center;
     background-color: gainsboro;
-    margin-top: 70px;
     min-width: 20vw;
 }
 .project-img:nth-child(4) {
@@ -192,39 +165,50 @@ h2 {
     background-size: cover;
     background-position: center;
     background-color: gainsboro;
-    margin-top: 70px;
     min-width: 20vw;
 }
 
-.project-img div {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: rgb(110, 110, 110);
-    opacity: 0%;
+.project-img div::before {
+    content: "";
+    background-color: rgb(37, 37, 37);
     height: 400px;
+    width: 100%;
+    opacity: 50%;
+    position: absolute;
 }
 
-.project-img div:hover {
+.project-img div {
+    height: 100%;
+    display: none;
+}
+
+.project-img div div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/* .project-img div:hover {
     animation: appear 1.5s;
     animation-fill-mode: forwards;
 }
 
 @keyframes appear {
-    70% {opacity: 70%;}
-}
+    100% {opacity: 50%;}
+} */
 
-.project-img div a {
+.project-img div div a {
     font-size: 20px;
-    width: 75%;
+    width: 80px;
     text-align: center;
     text-decoration: none;
-    color: black;
+    padding: 15px 10px 15px 10px;
     background: rgb(203, 255, 248);
-    border-radius: 20px;
-    margin-bottom: 20px;
-} */
+    border-radius: 100%;
+    grid-row: 2/3;
+    position: relative;
+}
 
 .arrow-2 {
     margin-top: 60px;
