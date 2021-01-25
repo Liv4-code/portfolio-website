@@ -58,3 +58,20 @@ names.forEach(name => {
         }
     });
 });
+
+// Mouseover event for project blocks to give them an overlay:
+
+const projectBlocks = document.querySelectorAll(".project-img");
+
+projectBlocks.forEach(project => {
+    project.addEventListener("mouseover", e => {
+        e.target.firstElementChild.style.display = "grid";
+        // console.log(e.type);
+    });
+});
+
+// projectBlocks.forEach(project => {
+//     project.addEventListener("mouseout", e => {
+//     e.target.firstElementChild.style.display = "none";
+//     });
+// });
