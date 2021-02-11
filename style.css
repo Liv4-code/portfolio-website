@@ -1,4 +1,4 @@
-/* Entire Page */
+/* -------------------------------------------------ELEMENTS------------------------------------------------------ */
 
 html {
     scroll-behavior: smooth;
@@ -9,44 +9,89 @@ body {
     width: 100%;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
 }
 
+/* -------------------------------------------- block 1 */
+h1 {
+    margin: 0;
+    text-align: center;
+    word-spacing: 50px;
+    font-size: 40px;
+    color: rgb(56, 56, 56);
+    grid-row: 3/4;
+    padding: 30px;
+}
+/* -------------------------------------------- block 2 */
+h2 {
+    margin: 0px;
+    text-align: center;
+    padding-top: 120px;
+    letter-spacing: 10px;
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+}
+/* -------------------------------------------- block 3 */
+h3 {
+    margin: 0px;
+    text-align: center;
+    padding-top: 120px;
+    letter-spacing: 10px;
+    font-size: 26px;
+    color: rgb(253, 215, 184);
+}
+
+/* -------------------------------------------------OBJECTS------------------------------------------------------ */
+
+/* ----- all blocks ----- */
 .block {
     box-sizing: content-box;
     width: 100%;
     height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 1fr;
 }
-
-/* Block 1 */
 
 .one {
     background: linear-gradient(90deg,rgb(255, 147, 176),rgb(255, 149, 83));
 }
 
-h1 {
-    margin: 0px;
-    text-align: center;
-    padding-top:200px;
-    word-spacing: 50px;
-    font-size: 40px;
-    color: rgb(56, 56, 56);
+.two {
+    grid-row: 2/3;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #222;
 }
 
-#nameHeading {
+.three {
+    grid-row: 3/4;
+    grid-template-columns: repeat(7, 1fr);
+    background: linear-gradient(90deg,rgb(255, 147, 176),rgb(255, 149, 83));
+}
+
+/* ----- all blocks ----- */
+.nav-button-container {
+    grid-row: 7/8;
+    grid-column: 1/8;
+    display: flex;
+    justify-content: center;
+}
+
+/* -------------------------------------------- block 1 */
+h1 .name-h1 {
     font-family: 'Roboto Mono', monospace;
-    text-decoration: bold;
     font-size: 2.5em;
     letter-spacing: 10px;
 }
 
-#webDeveloperHeading {
+h1 .web-dev-h1 {
     font-size: 1.6em;
     letter-spacing: 10px;
 }
 
-/* Icon styling */
-
 .icon-container {
+    grid-row: 4/5;
     display: flex;
     justify-content: center;
 }
@@ -89,18 +134,12 @@ h1 {
 .icon {
     font-size: 2em;
     color: white;
-}
+} 
 
-/* Arrow */
-
-.arrow-container a {
-    display: flex;
-    justify-content: center;
-    cursor: auto;
-}
+/* Navigation Buttons */
 
 .arrow-1 {
-    margin-top: 180px;
+    display: block;
     width: 20px;
     height: 20px;
     border-bottom: 4px solid #222 ;
@@ -109,24 +148,45 @@ h1 {
     animation: arrow-pulse 2s infinite;
 }
 
-/* Block 2 */
+@keyframes arrow-pulse
+{
+    0% 
+    {
+        opacity: 0%;
+    }
+    50% 
+    {
+        opacity: 80%;
+    }
+    75% 
+    {
+        opacity: 80%;
+    }
+    100% 
+    {
+        opacity: 0%;
+    }
+} 
 
-.two {
-    background-color: #222;
-}
-
-h2 {
-    margin: 0px;
-    text-align: center;
-    padding-top: 120px;
-    letter-spacing: 10px;
-    font-size: 28px;
-    color: rgb(255, 255, 255);
-}
-
-.projects-container {
+/* .nav-button-container a {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    cursor: pointer;
+} */
+
+/* Change the hover to decrease opacity of images only */
+
+/* .projects-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    grid-column-gap: 70px;
+    margin: 80px 30px 0 30px;
+}
+
+.project-img {
+    height: 50vh;
+    position: relative;
 }
 
 .project-img:nth-child(1) {
@@ -200,43 +260,13 @@ h2 {
     border-left: 4px solid rgb(228, 228, 228);
     transform: rotate(315deg);
     animation: arrow-pulse 2s infinite;
-}
+}*/
 
-@keyframes arrow-pulse
-{
-    0% 
-    {
-        opacity: 0%;
-    }
-    50% 
-    {
-        opacity: 50%;
-    }
-    100% 
-    {
-        opacity: 0%;
-    }
-}
-
-/* Block 3 */
-
-.three {
-    background: linear-gradient(90deg,rgb(255, 147, 176),rgb(255, 149, 83));
-}
-
+/* 
 #contact-container {
     display: flex;
     justify-content: space-evenly;
     margin-top: 15vh;
-}
-
-h3 {
-    margin: 0px;
-    text-align: center;
-    padding-top: 120px;
-    letter-spacing: 10px;
-    font-size: 26px;
-    color: rgb(253, 215, 184);
 }
 
 #quote {
@@ -270,11 +300,11 @@ h3 {
     {
         color: rgb(87, 87, 87);
     }
-}
+} */
 
 /* Form */
 
-form {
+/* form {
     border-radius: 25px;
     background-color: rgb(186, 245, 236);
     box-shadow: 0 0 20px 0 rgb(138, 136, 136) ;
@@ -312,12 +342,12 @@ textarea {
 
 .invalid {
     background-color: rgb(255, 155, 155);
-    border: 2px solid rgb(223, 66, 66);
+    border: 2px solid rgb(223, 66, 66); */
 }
 
 /* Home Button */
 
-.home-button {
+/* .home-button {
     display: flex;
     justify-content: center;
     margin-top: 135px;
@@ -335,4 +365,99 @@ textarea {
 
 .home-button button:focus {
     outline: none;
+} */
+
+/* Keyframes */
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 910px){
+
 }
+
+/* tablet */
+@media screen and (max-width: 768px){
+
+}
+
+/* mobile */
+@media screen and (max-width: 480px){
+    h1 {
+        grid-row: 2/3;
+    }
+    .nav-button-container {
+        grid-row: 6/7;
+        grid-column: 1/8;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile: Pixel 2 XL */
+/* @media screen and (max-height: 823px){
+    .block {
+        height: 103vh;
+    }
+} */
+
+/* mobile: iPhone X */
+/* @media screen and (max-height: 812px){
+    .block {
+        height: 112vh;
+    }
+} */
+
+/* mobile: Pixel 2, iPhone 6/7/8 Plus */
+/* @media screen and (max-height: 736px){
+    .block {
+        height: 103vh;
+    }
+} */
+
+/* mobile: Moto G4, Galaxy S5, iPhone 6/7/8 */
+/* @media screen and (max-height: 667px){
+    .block {
+        height: 117vh;
+    }
+} */
+
+/* mobile iPhone 5/SE */
+/* @media screen and (max-height: 568px){
+    .block {
+        height: 132vh;
+    }
+} */
+
+/* mobile iPhone 5/SE */
+/* @media screen and (max-height: 568px){
+    .block {
+        height: 132vh;
+    }
+} */
+
+/* mobile Galaxy Fold */
+/* @media screen and (max-width: 280px){
+    .block {
+        height: 151vh;
+    }
+} */

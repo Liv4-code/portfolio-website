@@ -3,7 +3,7 @@
     <head>
         <title>Olivia Scholtz</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width">
         <link href="style.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -11,11 +11,14 @@
         <script src="https://kit.fontawesome.com/df2859c34a.js" crossorigin="anonymous"></script>
     </head>
     <body>
-<!-- BLOCK ONE -->
+
         <header class="block one">
-            <h1>const <span id="nameHeading">olivia</span> = <span id="webDeveloperHeading">web developer</span>;</h1>
+
+            <!-- BLOCK ONE -->
+
+            <h1>const <span class="name-h1">olivia</span> = <span class="web-dev-h1">web developer</span>;</h1>
+
             <div class="icon-container">
-                
                     <a href="https://www.linkedin.com/in/olivia-s-5a37b982/" target="_blank">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9V416z" fill="white"/></svg>
@@ -31,71 +34,71 @@
                         </span>
                     </a>
             </div>
-            <div class="arrow-container">
+            <div class="nav-button-container">
                 <a href="#block-two"><span class="arrow-1"></span></a>
             </div>
         </header>
-<!-- BLOCK TWO -->
-        <main>
-            <div class="block two" id="block-two">
-                <h2 id="projects">Projects:</h2>
 
-                <div class="projects-container">
-                    <div class="project-img">
-                        <div>
-                            <a href="#">View Project</a>
-                            <a href="#">View Code</a>
-                        </div>
-                    </div>
-                    <div class="project-img">
-                        <div>
-                            <a href="#">View Project</a>
-                            <a href="#">View Code</a>
-                        </div>
-                    </div>
-                    <div class="project-img">
-                        <div>
-                            <a href="#">View Project</a>
-                            <a href="#">View Code</a>
-                        </div>
-                    </div>
-                    <div class="project-img">
-                        <div>
-                            <a href="#">View Project</a>
-                            <a href="#">View Code</a>
-                        </div>
+        <main class="block two" id="block-two">
+
+            <!-- BLOCK TWO -->
+
+            <h2 id="projects">Projects:</h2>
+            <div class="projects-container">
+                <div class="project-img">
+                    <div>
+                        <a href="#">View Project</a>
+                        <a href="#">View Code</a>
                     </div>
                 </div>
-
-                <div class="arrow-container">
-                    <a href="#block-three"><span class="arrow-2"></span></a>
+                <div class="project-img">
+                    <div>
+                        <a href="#">View Project</a>
+                        <a href="#">View Code</a>
+                    </div>
+                </div>
+                <div class="project-img">
+                    <div>
+                        <a href="#">View Project</a>
+                        <a href="#">View Code</a>
+                    </div>
+                </div>
+                <div class="project-img">
+                    <div>
+                        <a href="#">View Project</a>
+                        <a href="#">View Code</a>
+                    </div>
                 </div>
             </div>
-<!-- BLOCK THREE -->
-            <div class="block three" id="block-three">
-                <h3>Contact Me:</h3>
-                <div id="contact-container">
-                    <div id="quote">
-                        <p>"Knowing is not enough, we must apply. 
-                        Willing is not enough, we must do."<span>- Bruce Lee</span></p>
-                    </div>
-                    <form action="">
-                        <input type="text" name="firstname" id="firstname" class="name" placeholder="First Name">
-                        <input type="text" name="lastname" id="lastname" class="name" placeholder="Last Name">
-                        <input type="email" name="email" id="email" placeholder="Email">
-                        <textarea name="message" id="message" rows="5" cols="20" placeholder="Message"></textarea>
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-                <div class="home-button">
-                    <button>Home</button>
-                </div>
+
+            <div class="nav-button-container">
+                <a href="#block-three"><span class="arrow-2"></span></a>
             </div>
         </main>
 
-        <footer>
+        <footer class="block three" id="block-three">
 
+            <!-- BLOCK THREE -->
+
+            <h3>Contact Me:</h3>
+            <div id="contact-container">
+                <div id="quote">
+                    <p>"Knowing is not enough, we must apply. 
+                    Willing is not enough, we must do."<span>- Bruce Lee</span></p>
+                </div>
+                <form action="">
+                    <input type="text" name="firstname" id="firstname" class="name" placeholder="First Name">
+                    <input type="text" name="lastname" id="lastname" class="name" placeholder="Last Name">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <textarea name="message" id="message" rows="5" cols="20" placeholder="Message"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="nav-button-container">
+                <button>Home</button>
+            </div>
         </footer>
+
         <script src="view.js"></script>
     </body>
 </html>
