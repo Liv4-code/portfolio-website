@@ -53,7 +53,9 @@ form {
     padding: 25px;
     display: flex;
     flex-direction: column;
-    width: 260px;
+    width: 50%;
+    height: 100%;
+    margin-right: -30px;
 }
 
 form > * {
@@ -223,8 +225,8 @@ h1 .web-dev-h1 {
 
 /* -------------------------------------------- block 2 */
 img {
-    width: 250px;
-    height: 300px;
+    width: 150px;
+    height: 180px;
 }
 
 carousel-arrow {
@@ -261,9 +263,11 @@ carousel-arrow {
     grid-column: 3/4;
     grid-row: 3/4;
     justify-self: start;
+    align-self: center;
     word-spacing: 5px;
     letter-spacing: 5px;
     width: 70%;
+    margin-left: -50px;
 }
 
 .nav-3 {
@@ -287,18 +291,74 @@ carousel-arrow {
 
 /* Media Queries */
 
-@media screen and (min-width: 992px){
-
+@media screen and (max-width: 1024px){
+    h3 {
+        font-size: 2.5em;
+    }
+    form {
+        align-self: center;
+        width: 110%;
+        height: 150%;
+        margin-right: -180px;
+    }
+    .quote {
+        margin-left: -30px;
+        font-size: 1.5em;
+    }
+    .nav-3 {
+        font-size: 1.2em;
+        align-self: center;
+    }
 }
 
 /* tablet */
 @media screen and (max-width: 768px){
-
+    h3 {
+        font-size: 2em;
+    }
+    form {
+        align-self: center;
+        width: 100%;
+        height: 120%;
+        margin-right: -120px;
+    }
+    .quote {
+        margin-left: -30px;
+        font-size: 1.2em;
+    }
 }
 
 /* mobile */
 @media screen and (max-width: 480px){
-
+    .three {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "h3 h3"
+        "form quote"
+        "form quote"
+        "nav-3 nav-3";
+    }
+    h3 {
+        grid-area: h3;
+    }
+    form {
+        grid-area: form;
+        align-self: center;
+        width: 80%;
+        height: 70%;
+        margin-right: -20px;
+    }
+    .quote {
+        grid-area: quote;
+        justify-self: end;
+        margin-right: 15px;
+    }
+    .nav-3 {
+        grid-area: nav-3;
+        align-self: center;
+        font-size: 1em;
+    }
 }
 
 /*
