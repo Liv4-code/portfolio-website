@@ -225,8 +225,8 @@ h1 .web-dev-h1 {
 
 /* -------------------------------------------- block 2 */
 img {
-    width: 150px;
-    height: 180px;
+    width: 330px;
+    height: 390px;
 }
 
 carousel-arrow {
@@ -234,27 +234,21 @@ carousel-arrow {
     height: 50px;
 }
 
-.projects-container {
+.project-slide {
     grid-row: 2/4;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
-.img-1 {
-    width: 20%;
+.project-slide li {
+    width: 30%;
     background-color: whitesmoke;
-}
-.img-2 {
-    width: 20%;
-    background-color: whitesmoke;
-}
-.img-3 {
-    width: 20%;
-    background-color: whitesmoke;
-}
-.img-4 {
-    width: 20%;
-    background-color: whitesmoke;
+    position: absolute;
+    list-style: none;
 }
 
 /* -------------------------------------------- block 3 */
