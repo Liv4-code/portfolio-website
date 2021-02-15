@@ -11,7 +11,7 @@ Array.from(formChildren).forEach(child => {
 
 // Home Button
 
-const homeButton = document.querySelector("button");
+const homeButton = document.querySelector(".nav-3");
 
 homeButton.addEventListener("click", () => {
     window.scrollTo(0,0);

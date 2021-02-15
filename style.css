@@ -25,6 +25,7 @@ h1 {
 }
 /* -------------------------------------------- block 2 */
 h2 {
+    grid-row: 1/2;
     justify-self: center;
     align-self: center;
     margin: 0;
@@ -224,14 +225,11 @@ h1 .web-dev-h1 {
 /* Change the hover to decrease opacity of images only */
 
 /* -------------------------------------------- block 2 */
-img {
-    width: 330px;
-    height: 390px;
-}
-
-carousel-arrow {
-    width: 100px;
-    height: 50px;
+.projects-container {
+    grid-row: 2/4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .project-slide {
@@ -239,16 +237,51 @@ carousel-arrow {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     margin: 0;
     padding: 0;
 }
 
-.project-slide li {
-    width: 30%;
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 400px;
     background-color: whitesmoke;
     position: absolute;
     list-style: none;
+}
+
+.project img {
+    width: 400px;
+    height: 420px;
+}
+
+.project img + a {
+    left: 65%;
+}
+
+.project a + a {
+    right: 65%;
+}
+
+.project a {
+    position: absolute;
+    text-decoration: none;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+.carousel-buttons {
+    width: 90px;
+    height: 30px;
+}
+
+.left {
+    margin-right: 20%;
+}
+
+.right {
+    margin-left: 20%;
 }
 
 /* -------------------------------------------- block 3 */
@@ -286,6 +319,22 @@ carousel-arrow {
 /* Media Queries */
 
 @media screen and (max-width: 1024px){
+    .project img {
+        width: 445px;
+        height: 465px;
+    }
+    .carousel-buttons {
+        width: 100px;
+        height: 50px;
+        font-size: 1em;
+    }
+    .left {
+        margin-right: 35%;
+    }
+    
+    .right {
+        margin-left: 35%;
+    }
     h3 {
         font-size: 2.5em;
     }
@@ -307,6 +356,21 @@ carousel-arrow {
 
 /* tablet */
 @media screen and (max-width: 768px){
+    .project img {
+        width: 400px;
+        height: 420px;
+    }
+    .carousel-buttons {
+        width: 85px;
+        height: 40px;
+    }
+    .left {
+        margin-right: 32%;
+    }
+    
+    .right {
+        margin-left: 32%;
+    }
     h3 {
         font-size: 2em;
     }
