@@ -72,3 +72,32 @@ projectBlocks.forEach(project => {
         e.target.firstElementChild.style.display = "none";
     });
 });
+
+// Block 2 carousel:
+
+class Project {
+    constructor(){
+        this.image = "assets/history-quiz.png";
+        this.code = "https://github.com/Liv4-code/history-quiz";
+        this.link = link;
+    }
+}
+
+const historyQuiz = new Project();
+const todoList = new Project();
+const nailWebsite = new Project();
+const BcgChanger = new Project();
+
+const projects = [historyQuiz, todoList, nailWebsite, BcgChanger];
+
+// Grab a reference to Next and Prev buttons
+
+// Add click event listener to projects container, then, IF:
+
+// Next button is clicked, add 1 to index of current array item.
+
+// Minus 1 from index of current array item when prev is clicked.
+
+// when Next is clicked, add the prev button
+
+// if displayed project is last item in array
