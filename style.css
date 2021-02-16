@@ -278,6 +278,7 @@ h1 .web-dev-h1 {
 
 .left {
     margin-right: 20%;
+    visibility: hidden;
 }
 
 .right {

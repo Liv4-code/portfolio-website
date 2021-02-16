@@ -75,28 +75,42 @@ projectBlocks.forEach(project => {
 
 // Block 2 carousel:
 
-class Project {
-    constructor(){
-        this.image = "assets/history-quiz.png";
-        this.code = "https://github.com/Liv4-code/history-quiz";
-        this.link = link;
+const projectsContainer = document.querySelector(".projects-container");
+const nextButton = document.querySelector(".right");
+const prevButton = document.querySelector(".left");
+
+projectsContainer.addEventListener("click", e => {
+    if(e.target === nextButton){
+        console.log(e.target);
+        console.log(nextButton);
     }
-}
+});
 
-const historyQuiz = new Project();
-const todoList = new Project();
-const nailWebsite = new Project();
-const BcgChanger = new Project();
+// projectLi.innerHTML = 
+// "<img src="" alt="background changer project">
+// <a href="#">View Project</a>
+// <a href="https://github.com/Liv4-code/basic-javascript-projects/tree/master/background-change">View Code</a>";
 
-const projects = [historyQuiz, todoList, nailWebsite, BcgChanger];
+// class Project {
+//     constructor(){
+//         this.image = image;
+//         this.code = code;
+//         this.link = link;
+//     }
+// }
 
-// Grab a reference to Next and Prev buttons
+// const historyQuiz = new Project("assets/history-quiz.png", "https://github.com/Liv4-code/history-quiz");
+// const todoList = new Project("assets/todo-list.png");
+// const nailWebsite = new Project("assets/sparkle-me.png");
+// const BcgChanger = new Project("assets/bcg-change.png");
 
-// Add click event listener to projects container, then, IF:
+// const projects = [historyQuiz, todoList, nailWebsite, BcgChanger];
 
 // Next button is clicked, add 1 to index of current array item.
 
 // Minus 1 from index of current array item when prev is clicked.
+
+// Set innerHTML of img and a elements inside list items.
 
 // when Next is clicked, add the prev button
 
