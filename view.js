@@ -66,7 +66,6 @@ const projectBlocks = document.querySelectorAll(".project-img");
 projectBlocks.forEach(project => {
     project.addEventListener("mouseenter", e => {
         e.target.firstElementChild.style.display = "grid";
-        // console.log(e.type);
     });
     project.addEventListener("mouseleave", e => {
         e.target.firstElementChild.style.display = "none";
@@ -102,24 +101,26 @@ const htmlChange = (changeImage, changeLink, changeCode) => {
 
 htmlChange(projects[0].image, projects[0].link, projects[0].code);
 
+// Next and Prev Button
 const nextButton = document.querySelector(".right");
 const prevButton = document.querySelector(".left");
 
+// When next button is clicked, add 1 to index of current array item.
+let projectIndex = 0;
 projectsContainer.addEventListener("click", e => {
     if(e.target === nextButton){
-        htmlChange(projects[1].image, projects[1].link, projects[1].code);
+        projectIndex ++;
+        htmlChange(projects[projectIndex].image, projects[projectIndex].link, projects[projectIndex].code);
+        // return projectIndex;
+        prevButton.style.visibility = "visible";
+    } else if (e.target === prevButton){
+        projectIndex --;
+        htmlChange(projects[projectIndex].image, projects[projectIndex].link, projects[projectIndex].code);
+        // return projectIndex;
     }
-    // let projectIndex = 0;
-    // htmlChange(projects[projectIndex++].image, projects[projectIndex++].link, projects[projectIndex++].code);
     }
 ,);
-
-// Next button is clicked, add 1 to index of current array item.
-
-// Minus 1 from index of current array item when prev is clicked.
-
-// Set innerHTML of img and a elements inside list items.
-
-// when Next is clicked, add the prev button
-
-// if displayed project is last item in array
+// When Next is clicked, add the prev button
+// If displayed project is last item in array then remove next button
+// Stop incrementation once end of array is reached
+// If displayed project is first item in array then remove prev button
