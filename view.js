@@ -75,36 +75,44 @@ projectBlocks.forEach(project => {
 
 // Block 2 carousel:
 
+class Project {
+    constructor(image, code, link){
+        this.image = image;
+        this.code = code;
+        this.link = link;
+    }
+}
+
+const historyQuiz = new Project("assets/history-quiz.png", "https://github.com/Liv4-code/history-quiz", "#");
+const todoList = new Project("assets/todo-list.png", "https://github.com/Liv4-code/history-quiz", "#");
+const nailWebsite = new Project("assets/sparkle-me.png", "https://github.com/Liv4-code/history-quiz", "#");
+const BcgChanger = new Project("assets/bcg-change.png", "https://github.com/Liv4-code/history-quiz", "#");
+
+const projects = [historyQuiz, todoList, nailWebsite, BcgChanger];
+
 const projectsContainer = document.querySelector(".projects-container");
+const projectLi = document.querySelector(".project");
+
+const htmlChange = (changeImage, changeLink, changeCode) => {
+    projectLi.innerHTML =
+    `<img src="${changeImage}" alt="history quiz project">
+    <a href="${changeLink}">View Project</a>
+    <a href="${changeCode}">View Code</a>`;
+}
+
+htmlChange(projects[0].image, projects[0].link, projects[0].code);
+
 const nextButton = document.querySelector(".right");
 const prevButton = document.querySelector(".left");
 
 projectsContainer.addEventListener("click", e => {
     if(e.target === nextButton){
-        console.log(e.target);
-        console.log(nextButton);
+        htmlChange(projects[1].image, projects[1].link, projects[1].code);
     }
-});
-
-// projectLi.innerHTML = 
-// "<img src="" alt="background changer project">
-// <a href="#">View Project</a>
-// <a href="https://github.com/Liv4-code/basic-javascript-projects/tree/master/background-change">View Code</a>";
-
-// class Project {
-//     constructor(){
-//         this.image = image;
-//         this.code = code;
-//         this.link = link;
-//     }
-// }
-
-// const historyQuiz = new Project("assets/history-quiz.png", "https://github.com/Liv4-code/history-quiz");
-// const todoList = new Project("assets/todo-list.png");
-// const nailWebsite = new Project("assets/sparkle-me.png");
-// const BcgChanger = new Project("assets/bcg-change.png");
-
-// const projects = [historyQuiz, todoList, nailWebsite, BcgChanger];
+    // let projectIndex = 0;
+    // htmlChange(projects[projectIndex++].image, projects[projectIndex++].link, projects[projectIndex++].code);
+    }
+,);
 
 // Next button is clicked, add 1 to index of current array item.
 
