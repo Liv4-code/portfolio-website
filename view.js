@@ -107,6 +107,7 @@ const prevButton = document.querySelector(".left");
 
 // When next button is clicked, add 1 to index of current array item.
 let projectIndex = 0;
+
 projectsContainer.addEventListener("click", e => {
     if(e.target === nextButton){
         projectIndex ++;
@@ -116,11 +117,22 @@ projectsContainer.addEventListener("click", e => {
     } else if (e.target === prevButton){
         projectIndex --;
         htmlChange(projects[projectIndex].image, projects[projectIndex].link, projects[projectIndex].code);
-        // return projectIndex;
     }
+    // Display next and previous buttons at first or last project.
+    if(projectIndex === 0){
+        nextButton.style.visibility = "visible";
+    } else if(projectIndex === 3){
+        prevButton.style.visibility = "visible";
     }
-,);
-// When Next is clicked, add the prev button
-// If displayed project is last item in array then remove next button
-// Stop incrementation once end of array is reached
-// If displayed project is first item in array then remove prev button
+    // When displayed project is last item in array then remove next button
+    // If displayed project is first item in array then remove prev button
+    if(projectIndex === 3){
+        nextButton.style.visibility = "hidden";
+    } else if(projectIndex === 0){
+        prevButton.style.visibility = "hidden";
+    }
+});
+
+if(projects.indexOf(historyQuiz) === 0){
+    nextButton.style.visibility = "visible";
+}
