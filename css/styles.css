@@ -81,66 +81,6 @@ h3 {
   color: #fdd7b8;
 }
 
-form {
-  grid-column: 1/2;
-  grid-row: 3/4;
-  justify-self: end;
-  border-radius: 25px;
-  background-color: #baf5ec;
-  box-shadow: 0 0 20px 0 #8a8888;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: 100%;
-  margin-right: -30px;
-}
-form > * {
-  height: 20%;
-}
-form > *:focus {
-  outline: none;
-}
-
-input {
-  font-family: inherit;
-  font-weight: bold;
-  text-align: center;
-}
-
-textarea {
-  font-family: inherit;
-  font-weight: bold;
-  text-align: center;
-  height: 55%;
-}
-
-.project {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 400px;
-  background-color: whitesmoke;
-  position: absolute;
-  list-style: none;
-}
-.project img {
-  width: 400px;
-  height: 420px;
-}
-.project img + a {
-  left: 65%;
-}
-.project a + a {
-  right: 65%;
-}
-.project a {
-  position: absolute;
-  text-decoration: none;
-  background-color: whitesmoke;
-  padding: 10px;
-}
-
 .icon-container {
   grid-row: 3/4;
   display: flex;
@@ -218,7 +158,118 @@ textarea {
     opacity: 0%;
   }
 }
+/* -------------------------------------------- block 1 */
+h1 .name-h1 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2.5em;
+  letter-spacing: 10px;
+}
+
+h1 .web-dev-h1 {
+  font-size: 1.6em;
+  letter-spacing: 10px;
+}
+
+.arrow {
+  display: block;
+  width: 20px;
+  height: 20px;
+  transform: rotate(315deg);
+}
+
+/* -------------------------------------------- block 2 */
+.projects-container {
+  grid-row: 2/4;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.project-slide {
+  grid-row: 2/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 400px;
+  background-color: whitesmoke;
+  position: absolute;
+  list-style: none;
+}
+.project img {
+  width: 400px;
+  height: 420px;
+}
+.project img + a {
+  left: 65%;
+}
+.project a + a {
+  right: 65%;
+}
+.project a {
+  position: absolute;
+  text-decoration: none;
+  background-color: whitesmoke;
+  padding: 10px;
+}
+
+.carousel-buttons {
+  width: 90px;
+  height: 30px;
+}
+
+.left {
+  margin-right: 20%;
+  visibility: hidden;
+}
+
+.right {
+  margin-left: 20%;
+}
+
 /* -------------------------------------------- block 3 */
+form {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  justify-self: end;
+  border-radius: 25px;
+  background-color: #baf5ec;
+  box-shadow: 0 0 20px 0 #8a8888;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  margin-right: -30px;
+}
+form > * {
+  height: 20%;
+}
+form > *:focus {
+  outline: none;
+}
+
+input {
+  font-family: inherit;
+  font-weight: bold;
+  text-align: center;
+}
+
+textarea {
+  font-family: inherit;
+  font-weight: bold;
+  text-align: center;
+  height: 55%;
+}
+
 .quote {
   grid-column: 3/4;
   grid-row: 3/4;
@@ -245,57 +296,6 @@ textarea {
 }
 .nav-3:focus {
   outline: none;
-}
-
-/* -------------------------------------------- block 1 */
-h1 .name-h1 {
-  font-family: "Roboto Mono", monospace;
-  font-size: 2.5em;
-  letter-spacing: 10px;
-}
-
-h1 .web-dev-h1 {
-  font-size: 1.6em;
-  letter-spacing: 10px;
-}
-
-.arrow {
-  display: block;
-  width: 20px;
-  height: 20px;
-  transform: rotate(315deg);
-}
-
-/* Change the hover to decrease opacity of images only */
-/* -------------------------------------------- block 2 */
-.projects-container {
-  grid-row: 2/4;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.project-slide {
-  grid-row: 2/4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-.carousel-buttons {
-  width: 90px;
-  height: 30px;
-}
-
-.left {
-  margin-right: 20%;
-  visibility: hidden;
-}
-
-.right {
-  margin-left: 20%;
 }
 
 /* Media Queries */
@@ -430,108 +430,3 @@ h1 .web-dev-h1 {
     -ms-grid-column-span: 2;
   }
 }
-/*
-.project-img:nth-child(1) {
-    background-image: url("assets/bcg-change.png");
-    background-size: cover;
-    background-position: center;
-    background-color: gainsboro;
-    min-width: 20vw;
-}
-.project-img:nth-child(2) {
-    background-image: url("assets/history-quiz.png");
-    background-size: cover;
-    background-position: center;
-    background-color: gainsboro;
-    min-width: 20vw;
-}
-.project-img:nth-child(3) {
-    background-image: url("assets/sparkle-me.png");
-    background-size: cover;
-    background-position: center;
-    background-color: gainsboro;
-    min-width: 20vw;
-}
-.project-img:nth-child(4) {
-    background-image: url("assets/todo-list.png");
-    background-size: cover;
-    background-position: center;
-    background-color: gainsboro;
-    min-width: 20vw;
-}
-
-.project-img div::before {
-    content: "";
-    background-color: rgb(37, 37, 37);
-    height: 400px;
-    width: 100%;
-    opacity: 50%;
-    position: absolute;
-}
-
-.project-img div {
-    height: 100%;
-    display: none;
-}
-
-.project-img div div {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-rows: repeat(3, 1fr);
-}
-
-.project-img div div a {
-    font-size: 20px;
-    width: 80px;
-    text-align: center;
-    text-decoration: none;
-    padding: 15px 10px 15px 10px;
-    background: rgb(203, 255, 248);
-    border-radius: 30px;
-    color: black;
-    grid-row: 2/3;
-    position: relative;
-} */
-/* mobile: Pixel 2 XL */
-/* @media screen and (max-height: 823px){
-    .block {
-        height: 103vh;
-    }
-} */
-/* mobile: iPhone X */
-/* @media screen and (max-height: 812px){
-    .block {
-        height: 112vh;
-    }
-} */
-/* mobile: Pixel 2, iPhone 6/7/8 Plus */
-/* @media screen and (max-height: 736px){
-    .block {
-        height: 103vh;
-    }
-} */
-/* mobile: Moto G4, Galaxy S5, iPhone 6/7/8 */
-/* @media screen and (max-height: 667px){
-    .block {
-        height: 117vh;
-    }
-} */
-/* mobile iPhone 5/SE */
-/* @media screen and (max-height: 568px){
-    .block {
-        height: 132vh;
-    }
-} */
-/* mobile iPhone 5/SE */
-/* @media screen and (max-height: 568px){
-    .block {
-        height: 132vh;
-    }
-} */
-/* mobile Galaxy Fold */
-/* @media screen and (max-width: 280px){
-    .block {
-        height: 151vh;
-    }
-} */
