@@ -14,7 +14,29 @@ $navButColour: rgb(243, 243, 243);
     margin: 20px 35px 20px 35px;
 }
 
+@mixin projectBlock {
+    .projects-container {
+        position: relative;
+        .project a {
+            font-size: 1.5em;
+            text-align: center;
+            padding: 15px;
+            background-color: rgb(104, 104, 104);
+            color: $navButColour;
+            bottom: 170px;
+        }
+        .carousel-buttons {
+            width: 30%;
+            height: 10%;
+            position: absolute;
+            top: 545px;
+            font-size: 1.3em;
+        }
+    }
+}
+
 @mixin navButtons {
+    width: 90px;
     height: 40px;
     border: none;
     background-color: $navButColour;
@@ -247,11 +269,11 @@ h1 .web-dev-h1 {
         width: 400px;
         height: 420px;
         + a {
-            left: 65%;
+            left: 55%;
         }
     }
     a + a {
-        right: 65%;
+        right: 55%;
     }
     a {
         position: absolute;
@@ -262,7 +284,6 @@ h1 .web-dev-h1 {
 }
 
 .carousel-buttons {
-    width: 90px;
     @include navButtons;
 }
 
@@ -322,7 +343,6 @@ textarea {
     grid-row: 5/6;
     justify-self: center;
     align-self: center;
-    width: 80px;
     @include navButtons;
     &:hover {
         cursor: pointer;
@@ -369,6 +389,12 @@ textarea {
 
 /* tablet */
 @media screen and (max-width: 768px){
+    .nav-1 {
+        display: none;
+    }
+    .nav-2-container {
+        display: none;
+    }
     .project img {
         width: 400px;
         height: 420px;
@@ -397,6 +423,7 @@ textarea {
         margin-left: -30px;
         font-size: 1.2em;
     }
+    @include projectBlock;
 }
 
 /* mobile */
@@ -409,15 +436,6 @@ textarea {
     }
     .nav-1 {
         display: none;
-    }
-    .projects-container {
-        position: relative;
-    }
-    .carousel-buttons {
-        width: 30%;
-        height: 10%;
-        position: absolute;
-        top: 580px;
     }
     .nav-2-container {
         display: none;
@@ -449,6 +467,6 @@ textarea {
     .nav-3 {
         grid-area: nav-3;
         align-self: center;
-        font-size: 1em;
     }
+    @include projectBlock;
 }

@@ -209,10 +209,10 @@ h1 .web-dev-h1 {
   height: 420px;
 }
 .project img + a {
-  left: 65%;
+  left: 55%;
 }
 .project a + a {
-  right: 65%;
+  right: 55%;
 }
 .project a {
   position: absolute;
@@ -289,7 +289,7 @@ textarea {
   grid-row: 5/6;
   justify-self: center;
   align-self: center;
-  width: 80px;
+  width: 90px;
   height: 40px;
   border: none;
   background-color: #f3f3f3;
@@ -343,6 +343,14 @@ textarea {
 }
 /* tablet */
 @media screen and (max-width: 768px) {
+  .nav-1 {
+    display: none;
+  }
+
+  .nav-2-container {
+    display: none;
+  }
+
   .project img {
     width: 400px;
     height: 420px;
@@ -376,6 +384,25 @@ textarea {
     margin-left: -30px;
     font-size: 1.2em;
   }
+
+  .projects-container {
+    position: relative;
+  }
+  .projects-container .project a {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 15px;
+    background-color: #686868;
+    color: #f3f3f3;
+    bottom: 170px;
+  }
+  .projects-container .carousel-buttons {
+    width: 30%;
+    height: 10%;
+    position: absolute;
+    top: 545px;
+    font-size: 1.3em;
+  }
 }
 /* mobile */
 @media screen and (max-width: 480px) {
@@ -389,17 +416,6 @@ textarea {
 
   .nav-1 {
     display: none;
-  }
-
-  .projects-container {
-    position: relative;
-  }
-
-  .carousel-buttons {
-    width: 30%;
-    height: 10%;
-    position: absolute;
-    top: 580px;
   }
 
   .nav-2-container {
@@ -433,7 +449,25 @@ textarea {
   .nav-3 {
     grid-area: nav-3;
     align-self: center;
-    font-size: 1em;
+  }
+
+  .projects-container {
+    position: relative;
+  }
+  .projects-container .project a {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 15px;
+    background-color: #686868;
+    color: #f3f3f3;
+    bottom: 170px;
+  }
+  .projects-container .carousel-buttons {
+    width: 30%;
+    height: 10%;
+    position: absolute;
+    top: 545px;
+    font-size: 1.3em;
   }
 }
 @media screen and (max-width: 480px) {
