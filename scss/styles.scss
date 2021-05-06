@@ -61,7 +61,7 @@ body {
 .one {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
-    background: linear-gradient(90deg,rgb(255, 147, 176),rgb(255, 149, 83));
+    background: linear-gradient(90deg,$background-1,$background-2);
 }
 
 .two {
@@ -74,7 +74,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    background: linear-gradient(90deg,rgb(255, 147, 176),rgb(255, 149, 83));
+    background: linear-gradient(90deg,$background-1,$background-2);
 }
 
 /* -------------------------------------------- block 1 */
@@ -398,6 +398,18 @@ textarea {
 
 /* mobile */
 @media screen and (max-width: 480px){
+    body {
+        grid-auto-rows: 160vh;
+    }
+    .block {
+        height: 160vh;
+    }
+    .nav-1 {
+        display: none;
+    }
+    .nav-2-container {
+        display: none;
+    }
     .three {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);

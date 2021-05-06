@@ -378,6 +378,22 @@ textarea {
 }
 /* mobile */
 @media screen and (max-width: 480px) {
+  body {
+    grid-auto-rows: 160vh;
+  }
+
+  .block {
+    height: 160vh;
+  }
+
+  .nav-1 {
+    display: none;
+  }
+
+  .nav-2-container {
+    display: none;
+  }
+
   .three {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -409,21 +425,25 @@ textarea {
   }
 }
 @media screen and (max-width: 480px) {
+
   h3 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
   }
+
   form {
     -ms-grid-row: 2;
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
   }
+
   .quote {
     -ms-grid-row: 2;
     -ms-grid-row-span: 2;
     -ms-grid-column: 2;
   }
+
   .nav-3 {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
