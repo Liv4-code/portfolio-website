@@ -2,6 +2,7 @@
 
 $background-1: rgb(255, 147, 176);
 $background-2: rgb(255, 149, 83);
+$navButColour: rgb(243, 243, 243);
 
 // Mixins
 
@@ -11,6 +12,13 @@ $background-2: rgb(255, 149, 83);
     width: 47px;
     height: 47px;
     margin: 20px 35px 20px 35px;
+}
+
+@mixin navButtons {
+    height: 40px;
+    border: none;
+    background-color: $navButColour;
+    outline: none;
 }
 
 @mixin formAreas {
@@ -255,7 +263,7 @@ h1 .web-dev-h1 {
 
 .carousel-buttons {
     width: 90px;
-    height: 30px;
+    @include navButtons;
 }
 
 .left {
@@ -314,15 +322,10 @@ textarea {
     grid-row: 5/6;
     justify-self: center;
     align-self: center;
-    height: 40px;
     width: 80px;
-    border: none;
-    background-color: rgb(243, 243, 243);
+    @include navButtons;
     &:hover {
         cursor: pointer;
-    }
-    &:focus {
-        outline: none;
     }
 }
 
@@ -406,6 +409,15 @@ textarea {
     }
     .nav-1 {
         display: none;
+    }
+    .projects-container {
+        position: relative;
+    }
+    .carousel-buttons {
+        width: 30%;
+        height: 10%;
+        position: absolute;
+        top: 580px;
     }
     .nav-2-container {
         display: none;
