@@ -278,8 +278,12 @@ h1 .web-dev-h1 {
     a {
         position: absolute;
         text-decoration: none;
-        background-color: whitesmoke;
+        background-color: #222;
+        color: whitesmoke;
         padding: 10px;
+    }
+    & a:hover {
+        animation: slide-up 0.8s;
     }
 }
 
@@ -469,4 +473,16 @@ textarea {
         align-self: center;
     }
     @include projectBlock;
+}
+
+
+/* Animations */
+
+@keyframes slide-up {
+    40% {
+        padding-bottom: 20px;
+    }
+    100% {
+        padding-bottom: 10px;
+        }
 }
