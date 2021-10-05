@@ -284,6 +284,7 @@ textarea {
   align-self: center;
   word-spacing: 5px;
   letter-spacing: 5px;
+  font-weight: bolder;
   width: 70%;
   margin-left: -50px;
 }

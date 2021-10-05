@@ -50,8 +50,8 @@ $navButColour: rgb(243, 243, 243);
 }
 
 @mixin mediaQuery($arg) {
-    @media screen and (max-width: $arg){
-        @content
+    @media screen and (max-width: $arg) {
+        @content;
     }
 }
 
@@ -65,7 +65,7 @@ body {
     margin: 0;
     width: 100%;
     height: 100vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     display: grid;
     grid-auto-rows: 100vh;
 }
@@ -91,7 +91,7 @@ body {
 .one {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
-    background: linear-gradient(90deg,$background-1,$background-2);
+    background: linear-gradient(90deg, $background-1, $background-2);
 }
 
 .two {
@@ -104,12 +104,12 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    background: linear-gradient(90deg,$background-1,$background-2);
+    background: linear-gradient(90deg, $background-1, $background-2);
 }
 
 /* -------------------------------------------- block 1 */
 h1 {
-    grid-row: 2/3; 
+    grid-row: 2/3;
     margin: 0;
     text-align: center;
     word-spacing: 50px;
@@ -150,7 +150,7 @@ h3 {
         justify-content: center;
         align-items: center;
         &:hover {
-            box-shadow: 0px 0px 20px rgb(226, 226, 226)
+            box-shadow: 0px 0px 20px rgb(226, 226, 226);
         }
     }
 }
@@ -179,7 +179,7 @@ h3 {
     justify-self: center;
     align-self: center;
     span {
-        border-bottom: 4px solid #222 ;
+        border-bottom: 4px solid #222;
         border-left: 4px solid #222;
         animation: arrow-pulse 2s infinite;
     }
@@ -193,36 +193,30 @@ h3 {
 
 .nav-2 {
     span {
-        border-bottom: 4px solid rgb(228, 228, 228) ;
+        border-bottom: 4px solid rgb(228, 228, 228);
         border-left: 4px solid rgb(228, 228, 228);
         animation: arrow-pulse 2s infinite;
     }
 }
 
-@keyframes arrow-pulse
-{
-    0% 
-    {
+@keyframes arrow-pulse {
+    0% {
         opacity: 0%;
     }
-    50% 
-    {
+    50% {
         opacity: 80%;
     }
-    75% 
-    {
+    75% {
         opacity: 80%;
     }
-    100% 
-    {
+    100% {
         opacity: 0%;
     }
 }
 
-
 /* -------------------------------------------- block 1 */
 h1 .name-h1 {
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Roboto Mono", monospace;
     font-size: 2.5em;
     letter-spacing: 10px;
 }
@@ -307,7 +301,7 @@ form {
     justify-self: end;
     border-radius: 25px;
     background-color: rgb(186, 245, 236);
-    box-shadow: 0 0 20px 0 rgb(138, 136, 136) ;
+    box-shadow: 0 0 20px 0 rgb(138, 136, 136);
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -338,6 +332,7 @@ textarea {
     align-self: center;
     word-spacing: 5px;
     letter-spacing: 5px;
+    font-weight: bolder;
     width: 70%;
     margin-left: -50px;
 }
@@ -355,7 +350,7 @@ textarea {
 
 /* Media Queries */
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
     .project img {
         width: 445px;
         height: 465px;
@@ -368,7 +363,7 @@ textarea {
     .left {
         margin-right: 35%;
     }
-    
+
     .right {
         margin-left: 35%;
     }
@@ -392,7 +387,7 @@ textarea {
 }
 
 /* tablet */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .nav-1 {
         display: none;
     }
@@ -410,7 +405,7 @@ textarea {
     .left {
         margin-right: 32%;
     }
-    
+
     .right {
         margin-left: 32%;
     }
@@ -431,7 +426,7 @@ textarea {
 }
 
 /* mobile */
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
     body {
         grid-auto-rows: 160vh;
     }
@@ -447,11 +442,11 @@ textarea {
     .three {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        grid-template-areas: 
-        "h3 h3"
-        "form quote"
-        "form quote"
-        "nav-3 nav-3";
+        grid-template-areas:
+            "h3 h3"
+            "form quote"
+            "form quote"
+            "nav-3 nav-3";
     }
     h3 {
         grid-area: h3;
@@ -475,7 +470,6 @@ textarea {
     @include projectBlock;
 }
 
-
 /* Animations */
 
 @keyframes slide-up {
@@ -484,5 +478,5 @@ textarea {
     }
     100% {
         padding-bottom: 10px;
-        }
+    }
 }
