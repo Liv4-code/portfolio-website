@@ -74,7 +74,7 @@ class Project {
 const nutritionApp = new Project(
     "assets/nutrition-app.png",
     "https://github.com/Liv4-code/nutrition-app",
-    "#"
+    "https://pensive-lumiere-200aaa.netlify.app"
 );
 
 const historyQuiz = new Project(
