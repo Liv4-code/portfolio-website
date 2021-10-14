@@ -80,7 +80,7 @@ const nutritionApp = new Project(
 const historyQuiz = new Project(
     "assets/history-quiz.png",
     "https://github.com/Liv4-code/history-quiz",
-    "#"
+    "https://historyquiz.online"
 );
 
 const projects = [nutritionApp, historyQuiz];
