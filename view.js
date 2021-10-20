@@ -31,7 +31,7 @@ form.addEventListener("submit", (e) => {
     const lastname = form.lastname.value;
 
     if (pattern.test(firstname) && pattern.test(lastname)) {
-        alert("The name you submitted is valid, thank you.");
+        alert("Your message has been sent through, thank you.");
     } else {
         alert(
             "Make sure your first and last name are at least 2 characters long..."
