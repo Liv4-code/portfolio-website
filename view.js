@@ -21,24 +21,6 @@ homeButton.addEventListener("click", () => {
 
 const pattern = /^[a-zA-z]{2,}$/;
 
-// Submit event on form:
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    // validation
-    const firstname = form.firstname.value;
-    const lastname = form.lastname.value;
-
-    if (pattern.test(firstname) && pattern.test(lastname)) {
-        alert("Your message has been sent through, thank you.");
-    } else {
-        alert(
-            "Make sure your first and last name are at least 2 characters long..."
-        );
-    }
-});
-
 // User input color-change while typing into field (keyboard event):
 
 const names = document.querySelectorAll(".name");
