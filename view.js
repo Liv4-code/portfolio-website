@@ -65,7 +65,13 @@ const historyQuiz = new Project(
     "https://historyquiz.online"
 );
 
-const projects = [nutritionApp, historyQuiz];
+const sProductions = new Project(
+    "assets/scholtz-productions.png",
+    "https://github.com/Liv4-code/scholtz-productions",
+    "https://historyquiz.online"
+);
+
+const projects = [nutritionApp, historyQuiz, sProductions];
 
 const projectsContainer = document.querySelector(".projects-container");
 const projectLi = document.querySelector(".project");
@@ -106,12 +112,12 @@ projectsContainer.addEventListener("click", (e) => {
     // Display next and previous buttons at first or last project.
     if (projectIndex === 0) {
         nextButton.style.visibility = "visible";
-    } else if (projectIndex === 1) {
+    } else if (projectIndex === 2) {
         prevButton.style.visibility = "visible";
     }
     // When displayed project is last item in array then remove next button
     // If displayed project is first item in array then remove prev button
-    if (projectIndex === 1) {
+    if (projectIndex === 2) {
         nextButton.style.visibility = "hidden";
     } else if (projectIndex === 0) {
         prevButton.style.visibility = "hidden";
